@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic CRUD</title>
+</head>
+<body>
+    <h1>Create a Topic</h1>
+    <form id="create-topic-form">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required><br><br>
+
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" required><br><br>
+
+        <button type="submit">Create Topic</button>
+    </form>
+
+    <h1>Update a Topic</h1>
+    <form id="update-topic-form">
+        <label for="update-id">Topic ID:</label>
+        <input type="number" id="update-id" name="update-id" required><br><br>
+
+        <label for="update-title">Title:</label>
+        <input type="text" id="update-title" name="update-title" required><br><br>
+
+        <label for="update-description">Description:</label>
+        <input type="text" id="update-description" name="update-description" required><br><br>
+
+        <button type="submit">Update Topic</button>
+    </form>
+
+    <h2>Delete Topic</h2>
+<form id="delete-topic-form">
+  <label for="delete-id">Topic ID:</label>
+  <input type="number" id="delete-id" required />
+  <button type="submit">Delete Topic</button>
+</form>
+
+
+    <h1>Topics</h1>
+    <button onclick="getTopics()">Get All Topics</button>
+    <ul id="topics-list"></ul>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
